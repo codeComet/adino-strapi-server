@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_footer_footers",
+  "info": {
+    "displayName": "Footer"
+  },
+  "options": {},
+  "attributes": {
+    "social": {
+      "type": "string"
+    },
+    "social_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.icons"
+    },
+    "explore_adino_text": {
+      "type": "string"
+    },
+    "explore_adino_pages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.pages"
+    },
+    "governance_text": {
+      "type": "string"
+    },
+    "governance_pages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.pages"
+    },
+    "address_text": {
+      "type": "string"
+    },
+    "address_content": {
+      "type": "string"
+    },
+    "more_info_text": {
+      "type": "string"
+    },
+    "more_info_pages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.pages"
+    }
+  }
+}

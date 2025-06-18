@@ -37,6 +37,25 @@ export interface ElementsStatCard extends Struct.ComponentSchema {
   };
 }
 
+export interface FooterFooter extends Struct.ComponentSchema {
+  collectionName: 'components_footer_footers';
+  info: {
+    displayName: 'Footer';
+  };
+  attributes: {
+    address_content: Schema.Attribute.String;
+    address_text: Schema.Attribute.String;
+    explore_adino_pages: Schema.Attribute.Component<'header.pages', true>;
+    explore_adino_text: Schema.Attribute.String;
+    governance_pages: Schema.Attribute.Component<'header.pages', true>;
+    governance_text: Schema.Attribute.String;
+    more_info_pages: Schema.Attribute.Component<'header.pages', true>;
+    more_info_text: Schema.Attribute.String;
+    social: Schema.Attribute.String;
+    social_links: Schema.Attribute.Component<'header.icons', true>;
+  };
+}
+
 export interface HeaderIcons extends Struct.ComponentSchema {
   collectionName: 'components_header_icons';
   info: {
@@ -143,6 +162,7 @@ declare module '@strapi/strapi' {
       'elements.elements': ElementsElements;
       'elements.feature-item': ElementsFeatureItem;
       'elements.stat-card': ElementsStatCard;
+      'footer.footer': FooterFooter;
       'header.icons': HeaderIcons;
       'header.logo': HeaderLogo;
       'header.pages': HeaderPages;
