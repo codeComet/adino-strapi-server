@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_page_home_news_and_updates",
+  "info": {
+    "displayName": "Home News & Updates",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "shortHeading": {
+      "type": "string"
+    },
+    "bigHeading": {
+      "type": "string"
+    },
+    "newsCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.elements"
+    }
+  }
+}

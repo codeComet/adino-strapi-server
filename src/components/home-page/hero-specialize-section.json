@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_page_hero_specialize_sections",
+  "info": {
+    "displayName": "Home Specialize Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "specializeHeading": {
+      "type": "string"
+    },
+    "specializeItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-item"
+    }
+  }
+}

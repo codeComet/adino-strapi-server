@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_header_pages",
+  "info": {
+    "displayName": "Pages"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}

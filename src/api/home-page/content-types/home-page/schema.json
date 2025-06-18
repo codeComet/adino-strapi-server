@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "home-page.home-hero-section",
+        "home-page.home-about-section",
+        "home-page.hero-specialize-section",
+        "home-page.home-news-and-updates",
+        "home-page.home-career-section"
+      ]
+    }
+  }
+}
