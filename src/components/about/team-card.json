@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_about_team_cards",
+  "info": {
+    "displayName": "Team Card"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "social_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.icons"
+    }
+  }
+}

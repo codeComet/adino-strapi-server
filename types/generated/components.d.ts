@@ -1,5 +1,69 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutAboutHero extends Struct.ComponentSchema {
+  collectionName: 'components_about_about_heroes';
+  info: {
+    description: '';
+    displayName: 'about-hero';
+  };
+  attributes: {
+    aboutHeroImg: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    companyInfo: Schema.Attribute.Component<'elements.key-value', true>;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface AboutAboutInsight extends Struct.ComponentSchema {
+  collectionName: 'components_about_about_insights';
+  info: {
+    displayName: 'About Insight';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    insight_desc: Schema.Attribute.Blocks;
+    stats: Schema.Attribute.Component<'elements.stat-card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutAboutTeam extends Struct.ComponentSchema {
+  collectionName: 'components_about_about_teams';
+  info: {
+    displayName: 'About Team';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    team: Schema.Attribute.Component<'about.team-card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutAboutValues extends Struct.ComponentSchema {
+  collectionName: 'components_about_about_values';
+  info: {
+    description: '';
+    displayName: 'About Values';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    valueItems: Schema.Attribute.Component<'elements.key-value', true>;
+  };
+}
+
+export interface AboutTeamCard extends Struct.ComponentSchema {
+  collectionName: 'components_about_team_cards';
+  info: {
+    displayName: 'Team Card';
+  };
+  attributes: {
+    designation: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    name: Schema.Attribute.String;
+    social_links: Schema.Attribute.Component<'header.icons', true>;
+  };
+}
+
 export interface ElementsElements extends Struct.ComponentSchema {
   collectionName: 'components_elements_elements';
   info: {
@@ -22,6 +86,19 @@ export interface ElementsFeatureItem extends Struct.ComponentSchema {
     feature_image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     href: Schema.Attribute.String;
     name: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsKeyValue extends Struct.ComponentSchema {
+  collectionName: 'components_elements_key_values';
+  info: {
+    description: '';
+    displayName: 'key-value';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -159,8 +236,14 @@ export interface HomePageHomeNewsAndUpdates extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about.about-hero': AboutAboutHero;
+      'about.about-insight': AboutAboutInsight;
+      'about.about-team': AboutAboutTeam;
+      'about.about-values': AboutAboutValues;
+      'about.team-card': AboutTeamCard;
       'elements.elements': ElementsElements;
       'elements.feature-item': ElementsFeatureItem;
+      'elements.key-value': ElementsKeyValue;
       'elements.stat-card': ElementsStatCard;
       'footer.footer': FooterFooter;
       'header.icons': HeaderIcons;

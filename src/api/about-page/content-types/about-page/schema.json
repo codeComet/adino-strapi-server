@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "aboutHero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.about-hero"
+    },
+    "aboutCompany": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.key-value"
+    },
+    "mission": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.key-value"
+    },
+    "aboutSections": {
+      "type": "dynamiczone",
+      "components": [
+        "about.about-insight",
+        "about.about-values",
+        "about.about-team"
+      ]
+    }
+  }
+}

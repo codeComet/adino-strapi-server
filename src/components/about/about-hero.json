@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_about_about_heroes",
+  "info": {
+    "displayName": "about-hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "companyInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.key-value"
+    },
+    "aboutHeroImg": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

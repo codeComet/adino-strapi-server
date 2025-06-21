@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_about_about_insights",
+  "info": {
+    "displayName": "About Insight"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.stat-card"
+    },
+    "insight_desc": {
+      "type": "blocks"
+    }
+  }
+}
