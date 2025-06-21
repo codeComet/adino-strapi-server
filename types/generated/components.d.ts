@@ -96,7 +96,7 @@ export interface ElementsKeyValue extends Struct.ComponentSchema {
     displayName: 'key-value';
   };
   attributes: {
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
   };
