@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Jobs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Full-Time",
+        "Part-Time"
+      ]
+    },
+    "location": {
+      "type": "enumeration",
+      "enum": [
+        "Remote",
+        "Lagos, Nigeria"
+      ]
+    },
+    "summary": {
+      "type": "blocks"
+    },
+    "department": {
+      "type": "enumeration",
+      "enum": [
+        "Investment",
+        "IT",
+        "Accounts"
+      ]
+    },
+    "key_responsibilities_text": {
+      "type": "string",
+      "default": "Key Responsibilities"
+    },
+    "key_responsibilities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.single-text-repeater"
+    },
+    "qualifications_text": {
+      "type": "string",
+      "default": "Qualifications"
+    },
+    "qualifications": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.single-text-repeater"
+    },
+    "experience_text": {
+      "type": "string",
+      "default": "Skills & Experience"
+    },
+    "experience": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.single-text-repeater"
+    },
+    "join_adino_text": {
+      "type": "string",
+      "default": "Why Join Us?"
+    },
+    "join_adino": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.single-text-repeater"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Marketing",
+        "Communications",
+        "IT"
+      ]
+    },
+    "slug": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.elements"
+    }
+  }
+}

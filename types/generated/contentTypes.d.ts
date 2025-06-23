@@ -442,6 +442,42 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCareerCareer extends Struct.SingleTypeSchema {
+  collectionName: 'careers';
+  info: {
+    description: '';
+    displayName: 'Career';
+    pluralName: 'careers';
+    singularName: 'career';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    career: Schema.Attribute.DynamicZone<
+      [
+        'career.career-stats',
+        'career.career-hero',
+        'career.career-benefits',
+        'elements.key-value',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::career.career'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   collectionName: 'footers';
   info: {
@@ -502,6 +538,66 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       ]
     >;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiJobJob extends Struct.CollectionTypeSchema {
+  collectionName: 'jobs';
+  info: {
+    description: '';
+    displayName: 'Jobs';
+    pluralName: 'jobs';
+    singularName: 'job';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      ['Marketing', 'Communications', 'IT']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'elements.elements', false>;
+    department: Schema.Attribute.Enumeration<['Investment', 'IT', 'Accounts']>;
+    experience: Schema.Attribute.Component<
+      'elements.single-text-repeater',
+      true
+    >;
+    experience_text: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Skills & Experience'>;
+    join_adino: Schema.Attribute.Component<
+      'elements.single-text-repeater',
+      true
+    >;
+    join_adino_text: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Why Join Us?'>;
+    key_responsibilities: Schema.Attribute.Component<
+      'elements.single-text-repeater',
+      true
+    >;
+    key_responsibilities_text: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Key Responsibilities'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::job.job'> &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.Enumeration<['Remote', 'Lagos, Nigeria']>;
+    publishedAt: Schema.Attribute.DateTime;
+    qualifications: Schema.Attribute.Component<
+      'elements.single-text-repeater',
+      true
+    >;
+    qualifications_text: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Qualifications'>;
+    short_description: Schema.Attribute.Text;
+    slug: Schema.Attribute.String;
+    summary: Schema.Attribute.Blocks;
+    title: Schema.Attribute.Text;
+    type: Schema.Attribute.Enumeration<['Full-Time', 'Part-Time']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1048,8 +1144,10 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::blog.blog': ApiBlogBlog;
+      'api::career.career': ApiCareerCareer;
       'api::footer.footer': ApiFooterFooter;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::job.job': ApiJobJob;
       'api::newsletter.newsletter': ApiNewsletterNewsletter;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

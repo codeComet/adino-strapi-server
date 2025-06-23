@@ -64,6 +64,44 @@ export interface AboutTeamCard extends Struct.ComponentSchema {
   };
 }
 
+export interface CareerCareerBenefits extends Struct.ComponentSchema {
+  collectionName: 'components_career_career_benefits';
+  info: {
+    description: '';
+    displayName: 'Career Benefits';
+  };
+  attributes: {
+    benefits: Schema.Attribute.Component<'elements.key-value', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CareerCareerHero extends Struct.ComponentSchema {
+  collectionName: 'components_career_career_heroes';
+  info: {
+    displayName: 'Career Hero';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.elements', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    hero_img: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CareerCareerStats extends Struct.ComponentSchema {
+  collectionName: 'components_career_career_stats';
+  info: {
+    displayName: 'Career Stats';
+  };
+  attributes: {
+    stats: Schema.Attribute.Component<'elements.stat-card', true>;
+  };
+}
+
 export interface ElementsElements extends Struct.ComponentSchema {
   collectionName: 'components_elements_elements';
   info: {
@@ -99,6 +137,17 @@ export interface ElementsKeyValue extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsSingleTextRepeater extends Struct.ComponentSchema {
+  collectionName: 'components_elements_single_text_repeaters';
+  info: {
+    description: '';
+    displayName: 'Single Text Repeater';
+  };
+  attributes: {
+    value: Schema.Attribute.Text;
   };
 }
 
@@ -241,9 +290,13 @@ declare module '@strapi/strapi' {
       'about.about-team': AboutAboutTeam;
       'about.about-values': AboutAboutValues;
       'about.team-card': AboutTeamCard;
+      'career.career-benefits': CareerCareerBenefits;
+      'career.career-hero': CareerCareerHero;
+      'career.career-stats': CareerCareerStats;
       'elements.elements': ElementsElements;
       'elements.feature-item': ElementsFeatureItem;
       'elements.key-value': ElementsKeyValue;
+      'elements.single-text-repeater': ElementsSingleTextRepeater;
       'elements.stat-card': ElementsStatCard;
       'footer.footer': FooterFooter;
       'header.icons': HeaderIcons;

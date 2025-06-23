@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_career_career_benefits",
+  "info": {
+    "displayName": "Career Benefits",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "benefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.key-value"
+    }
+  }
+}

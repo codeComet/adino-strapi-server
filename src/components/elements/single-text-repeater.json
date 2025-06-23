@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_single_text_repeaters",
+  "info": {
+    "displayName": "Single Text Repeater",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "text"
+    }
+  }
+}

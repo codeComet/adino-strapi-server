@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_career_career_stats",
+  "info": {
+    "displayName": "Career Stats"
+  },
+  "options": {},
+  "attributes": {
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.stat-card"
+    }
+  }
+}

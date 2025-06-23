@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "careers",
+  "info": {
+    "singularName": "career",
+    "pluralName": "careers",
+    "displayName": "Career",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "career": {
+      "type": "dynamiczone",
+      "components": [
+        "career.career-stats",
+        "career.career-hero",
+        "career.career-benefits",
+        "elements.key-value"
+      ]
+    }
+  }
+}
