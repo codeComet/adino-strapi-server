@@ -421,7 +421,14 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   };
   attributes: {
     banner_image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    category: Schema.Attribute.Enumeration<['adino news']> &
+    category: Schema.Attribute.Enumeration<
+      [
+        'adino news',
+        'strategic partnerships',
+        'industry trends',
+        'sustainibility spotlight',
+      ]
+    > &
       Schema.Attribute.DefaultTo<'adino news'>;
     content: Schema.Attribute.Blocks & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
@@ -538,6 +545,39 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       ]
     >;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiInsightInsight extends Struct.SingleTypeSchema {
+  collectionName: 'insights';
+  info: {
+    description: '';
+    displayName: 'Insights';
+    pluralName: 'insights';
+    singularName: 'insight';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'elements.elements', false>;
+    footer_bg: Schema.Attribute.Media<'images' | 'files'>;
+    footer_text: Schema.Attribute.Text;
+    heading: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::insight.insight'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1147,6 +1187,7 @@ declare module '@strapi/strapi' {
       'api::career.career': ApiCareerCareer;
       'api::footer.footer': ApiFooterFooter;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::insight.insight': ApiInsightInsight;
       'api::job.job': ApiJobJob;
       'api::newsletter.newsletter': ApiNewsletterNewsletter;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -34,7 +34,10 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "adino news"
+        "adino news",
+        "strategic partnerships",
+        "industry trends",
+        "sustainibility spotlight"
       ],
       "default": "adino news"
     },
