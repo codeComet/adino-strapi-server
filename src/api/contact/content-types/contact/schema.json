@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "text"
+    },
+    "map_heading": {
+      "type": "text"
+    },
+    "contact_info": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.key-value"
+    },
+    "faq_title": {
+      "type": "string"
+    },
+    "faq_heading": {
+      "type": "text"
+    },
+    "faq_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.key-value"
+    }
+  }
+}
