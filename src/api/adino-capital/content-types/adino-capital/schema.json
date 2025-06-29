@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "adino_capitals",
+  "info": {
+    "singularName": "adino-capital",
+    "pluralName": "adino-capitals",
+    "displayName": "Adino Capital"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "subsidiaries.global-market-hero",
+        "subsidiaries.global-market-about",
+        "subsidiaries.global-market-service"
+      ]
+    }
+  }
+}

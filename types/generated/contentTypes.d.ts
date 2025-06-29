@@ -408,6 +408,147 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAdinoAssetManagementAdinoAssetManagement
+  extends Struct.SingleTypeSchema {
+  collectionName: 'adino_asset_managements';
+  info: {
+    displayName: 'Adino Asset Management';
+    pluralName: 'adino-asset-managements';
+    singularName: 'adino-asset-management';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::adino-asset-management.adino-asset-management'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sections: Schema.Attribute.DynamicZone<
+      [
+        'home-page.home-hero-section',
+        'subsidiaries.global-market-about',
+        'subsidiaries.global-market-service',
+      ]
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAdinoCapitalAdinoCapital extends Struct.SingleTypeSchema {
+  collectionName: 'adino_capitals';
+  info: {
+    displayName: 'Adino Capital';
+    pluralName: 'adino-capitals';
+    singularName: 'adino-capital';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::adino-capital.adino-capital'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sections: Schema.Attribute.DynamicZone<
+      [
+        'subsidiaries.global-market-hero',
+        'subsidiaries.global-market-about',
+        'subsidiaries.global-market-service',
+      ]
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAdinoGlobalMarketAdinoGlobalMarket
+  extends Struct.SingleTypeSchema {
+  collectionName: 'adino_global_markets';
+  info: {
+    description: '';
+    displayName: 'Adino Global Market';
+    pluralName: 'adino-global-markets';
+    singularName: 'adino-global-market';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::adino-global-market.adino-global-market'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sections: Schema.Attribute.DynamicZone<
+      [
+        'subsidiaries.global-market-service',
+        'subsidiaries.global-market-hero',
+        'subsidiaries.global-market-about',
+        'subsidiaries.subsidiary-testimonial',
+        'subsidiaries.subsidiary-newsletter',
+      ]
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAdinoPartnerAdinoPartner extends Struct.SingleTypeSchema {
+  collectionName: 'adino_partners';
+  info: {
+    displayName: 'Adino Partners';
+    pluralName: 'adino-partners';
+    singularName: 'adino-partner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::adino-partner.adino-partner'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sections: Schema.Attribute.DynamicZone<
+      [
+        'home-page.home-hero-section',
+        'subsidiaries.global-market-about',
+        'subsidiaries.global-market-service',
+      ]
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   collectionName: 'blogs';
   info: {
@@ -438,6 +579,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    read_time: Schema.Attribute.Text;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
@@ -682,6 +824,7 @@ export interface ApiJobJob extends Struct.CollectionTypeSchema {
 export interface ApiNewsletterNewsletter extends Struct.SingleTypeSchema {
   collectionName: 'newsletters';
   info: {
+    description: '';
     displayName: 'Newsletter';
     pluralName: 'newsletters';
     singularName: 'newsletter';
@@ -708,13 +851,46 @@ export interface ApiNewsletterNewsletter extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiTestimonialTestimonial extends Struct.SingleTypeSchema {
-  collectionName: 'testimonials';
+export interface ApiSubsidiaryNewsletterSubsidiaryNewsletter
+  extends Struct.SingleTypeSchema {
+  collectionName: 'subsidiary_newsletters';
+  info: {
+    displayName: 'Subsidiary Newsletter';
+    pluralName: 'subsidiary-newsletters';
+    singularName: 'subsidiary-newsletter';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Component<
+      'subsidiaries.subsidiary-newsletter',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::subsidiary-newsletter.subsidiary-newsletter'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSubsidiaryTestimonialSubsidiaryTestimonial
+  extends Struct.SingleTypeSchema {
+  collectionName: 'subsidiary_testimonials';
   info: {
     description: '';
-    displayName: 'Testimonial';
-    pluralName: 'testimonials';
-    singularName: 'testimonial';
+    displayName: 'Subsidiary Testimonial Slider';
+    pluralName: 'subsidiary-testimonials';
+    singularName: 'subsidiary-testimonial';
   };
   options: {
     draftAndPublish: true;
@@ -723,16 +899,17 @@ export interface ApiTestimonialTestimonial extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    heading: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::testimonial.testimonial'
+      'api::subsidiary-testimonial.subsidiary-testimonial'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    testimonials: Schema.Attribute.Component<'elements.testimonial-card', true>;
-    title: Schema.Attribute.String;
+    testimonials: Schema.Attribute.Component<
+      'subsidiaries.subsidiary-testimonial',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1249,6 +1426,10 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
+      'api::adino-asset-management.adino-asset-management': ApiAdinoAssetManagementAdinoAssetManagement;
+      'api::adino-capital.adino-capital': ApiAdinoCapitalAdinoCapital;
+      'api::adino-global-market.adino-global-market': ApiAdinoGlobalMarketAdinoGlobalMarket;
+      'api::adino-partner.adino-partner': ApiAdinoPartnerAdinoPartner;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
       'api::contact.contact': ApiContactContact;
@@ -1257,7 +1438,8 @@ declare module '@strapi/strapi' {
       'api::insight.insight': ApiInsightInsight;
       'api::job.job': ApiJobJob;
       'api::newsletter.newsletter': ApiNewsletterNewsletter;
-      'api::testimonial.testimonial': ApiTestimonialTestimonial;
+      'api::subsidiary-newsletter.subsidiary-newsletter': ApiSubsidiaryNewsletterSubsidiaryNewsletter;
+      'api::subsidiary-testimonial.subsidiary-testimonial': ApiSubsidiaryTestimonialSubsidiaryTestimonial;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

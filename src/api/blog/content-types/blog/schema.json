@@ -45,6 +45,9 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "read_time": {
+      "type": "text"
     }
   }
 }

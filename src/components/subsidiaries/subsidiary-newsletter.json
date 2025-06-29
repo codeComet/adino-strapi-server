@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_subsidiaries_subsidiary_newsletters",
+  "info": {
+    "displayName": "Subsidiary Newsletter"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "social_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.icons"
+    }
+  }
+}

@@ -138,6 +138,7 @@ export interface ElementsKeyValue extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
     url: Schema.Attribute.Text;
+    url_text: Schema.Attribute.String;
   };
 }
 
@@ -199,11 +200,13 @@ export interface FooterFooter extends Struct.ComponentSchema {
 export interface HeaderIcons extends Struct.ComponentSchema {
   collectionName: 'components_header_icons';
   info: {
+    description: '';
     displayName: 'Icons';
   };
   attributes: {
     icon_image: Schema.Attribute.Media<'images' | 'files'>;
     icon_url: Schema.Attribute.String;
+    name: Schema.Attribute.String;
   };
 }
 
@@ -299,14 +302,17 @@ export interface HomePageHomeNewsAndUpdates extends Struct.ComponentSchema {
 export interface SubsidiariesGlobalMarketAbout extends Struct.ComponentSchema {
   collectionName: 'components_subsidiaries_global_market_abouts';
   info: {
+    description: '';
     displayName: 'Global market about';
   };
   attributes: {
+    carousel: Schema.Attribute.Media<'images', true>;
     description_1: Schema.Attribute.Blocks;
     description_2: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Text;
     image_1: Schema.Attribute.Media<'images'>;
     image_2: Schema.Attribute.Media<'images'>;
+    stats: Schema.Attribute.Component<'elements.key-value', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -314,13 +320,14 @@ export interface SubsidiariesGlobalMarketAbout extends Struct.ComponentSchema {
 export interface SubsidiariesGlobalMarketHero extends Struct.ComponentSchema {
   collectionName: 'components_subsidiaries_global_market_heroes';
   info: {
+    description: '';
     displayName: 'global market hero';
   };
   attributes: {
     cta: Schema.Attribute.Component<'elements.elements', false>;
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
-    hero_bg: Schema.Attribute.Media<'images'>;
+    hero_bg: Schema.Attribute.Media<'images' | 'videos'>;
     stats: Schema.Attribute.Component<'elements.stat-card', true>;
     title: Schema.Attribute.String;
   };
@@ -330,11 +337,41 @@ export interface SubsidiariesGlobalMarketService
   extends Struct.ComponentSchema {
   collectionName: 'components_subsidiaries_global_market_services';
   info: {
+    description: '';
     displayName: 'Global market service';
   };
   attributes: {
+    cta: Schema.Attribute.Component<'elements.elements', false>;
     heading: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
     services: Schema.Attribute.Component<'elements.key-value', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SubsidiariesSubsidiaryNewsletter
+  extends Struct.ComponentSchema {
+  collectionName: 'components_subsidiaries_subsidiary_newsletters';
+  info: {
+    displayName: 'Subsidiary Newsletter';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Text;
+    social_links: Schema.Attribute.Component<'header.icons', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SubsidiariesSubsidiaryTestimonial
+  extends Struct.ComponentSchema {
+  collectionName: 'components_subsidiaries_subsidiary_testimonials';
+  info: {
+    displayName: 'Subsidiary Testimonial';
+  };
+  attributes: {
+    heading: Schema.Attribute.Text;
+    testimonials: Schema.Attribute.Component<'elements.testimonial-card', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -368,6 +405,8 @@ declare module '@strapi/strapi' {
       'subsidiaries.global-market-about': SubsidiariesGlobalMarketAbout;
       'subsidiaries.global-market-hero': SubsidiariesGlobalMarketHero;
       'subsidiaries.global-market-service': SubsidiariesGlobalMarketService;
+      'subsidiaries.subsidiary-newsletter': SubsidiariesSubsidiaryNewsletter;
+      'subsidiaries.subsidiary-testimonial': SubsidiariesSubsidiaryTestimonial;
     }
   }
 }

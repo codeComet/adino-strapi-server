@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "adino_global_markets",
+  "info": {
+    "singularName": "adino-global-market",
+    "pluralName": "adino-global-markets",
+    "displayName": "Adino Global Market",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "subsidiaries.global-market-service",
+        "subsidiaries.global-market-hero",
+        "subsidiaries.global-market-about",
+        "subsidiaries.subsidiary-testimonial",
+        "subsidiaries.subsidiary-newsletter"
+      ]
+    }
+  }
+}

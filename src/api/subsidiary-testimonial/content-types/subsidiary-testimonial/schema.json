@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "subsidiary_testimonials",
+  "info": {
+    "singularName": "subsidiary-testimonial",
+    "pluralName": "subsidiary-testimonials",
+    "displayName": "Subsidiary Testimonial Slider",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "testimonials": {
+      "type": "component",
+      "repeatable": false,
+      "component": "subsidiaries.subsidiary-testimonial"
+    }
+  }
+}

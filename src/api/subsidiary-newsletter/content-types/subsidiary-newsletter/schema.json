@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "subsidiary_newsletters",
+  "info": {
+    "singularName": "subsidiary-newsletter",
+    "pluralName": "subsidiary-newsletters",
+    "displayName": "Subsidiary Newsletter"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "subsidiaries.subsidiary-newsletter"
+    }
+  }
+}

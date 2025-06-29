@@ -4,7 +4,8 @@
   "info": {
     "singularName": "newsletter",
     "pluralName": "newsletters",
-    "displayName": "Newsletter"
+    "displayName": "Newsletter",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

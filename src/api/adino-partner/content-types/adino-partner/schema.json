@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "adino_partners",
+  "info": {
+    "singularName": "adino-partner",
+    "pluralName": "adino-partners",
+    "displayName": "Adino Partners"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "home-page.home-hero-section",
+        "subsidiaries.global-market-about",
+        "subsidiaries.global-market-service"
+      ]
+    }
+  }
+}

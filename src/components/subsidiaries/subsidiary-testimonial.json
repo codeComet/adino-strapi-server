@@ -1,15 +1,9 @@
 {
-  "kind": "singleType",
-  "collectionName": "testimonials",
+  "collectionName": "components_subsidiaries_subsidiary_testimonials",
   "info": {
-    "singularName": "testimonial",
-    "pluralName": "testimonials",
-    "displayName": "Testimonial",
-    "description": ""
+    "displayName": "Subsidiary Testimonial"
   },
-  "options": {
-    "draftAndPublish": true
-  },
+  "options": {},
   "attributes": {
     "title": {
       "type": "string"
