@@ -84,13 +84,14 @@ export interface CareerCareerBenefits extends Struct.ComponentSchema {
 export interface CareerCareerHero extends Struct.ComponentSchema {
   collectionName: 'components_career_career_heroes';
   info: {
+    description: '';
     displayName: 'Career Hero';
   };
   attributes: {
     cta: Schema.Attribute.Component<'elements.elements', false>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
-    hero_img: Schema.Attribute.Media<'images'>;
+    hero_img: Schema.Attribute.Media<'images', true>;
     title: Schema.Attribute.String;
   };
 }

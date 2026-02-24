@@ -1,7 +1,8 @@
 {
   "collectionName": "components_career_career_heroes",
   "info": {
-    "displayName": "Career Hero"
+    "displayName": "Career Hero",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -20,11 +21,12 @@
       "component": "elements.elements"
     },
     "hero_img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
