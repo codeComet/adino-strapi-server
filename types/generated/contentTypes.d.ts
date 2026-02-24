@@ -719,6 +719,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         'home-page.hero-specialize-section',
         'home-page.home-news-and-updates',
         'home-page.home-career-section',
+        'home-page.home-partner-section',
       ]
     >;
     Title: Schema.Attribute.String & Schema.Attribute.Required;

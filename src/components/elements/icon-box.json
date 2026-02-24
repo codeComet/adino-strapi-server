@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_icon_boxes",
+  "info": {
+    "displayName": "Icon Box"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

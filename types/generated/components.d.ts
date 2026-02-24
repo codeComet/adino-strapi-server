@@ -29,12 +29,15 @@ export interface AboutAboutInsight extends Struct.ComponentSchema {
 export interface AboutAboutTeam extends Struct.ComponentSchema {
   collectionName: 'components_about_about_teams';
   info: {
+    description: '';
     displayName: 'About Team';
   };
   attributes: {
-    heading: Schema.Attribute.String;
-    team: Schema.Attribute.Component<'about.team-card', true>;
-    title: Schema.Attribute.String;
+    directorDescription: Schema.Attribute.Text;
+    directorTitle: Schema.Attribute.String;
+    teamDescription: Schema.Attribute.Text;
+    teamMember: Schema.Attribute.Component<'about.team-card', true>;
+    teamTitle: Schema.Attribute.String;
   };
 }
 
@@ -124,6 +127,18 @@ export interface ElementsFeatureItem extends Struct.ComponentSchema {
     feature_image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     href: Schema.Attribute.String;
     name: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsIconBox extends Struct.ComponentSchema {
+  collectionName: 'components_elements_icon_boxes';
+  info: {
+    displayName: 'Icon Box';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -299,6 +314,19 @@ export interface HomePageHomeNewsAndUpdates extends Struct.ComponentSchema {
   };
 }
 
+export interface HomePageHomePartnerSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_home_partner_sections';
+  info: {
+    description: '';
+    displayName: 'Home Partner Section';
+  };
+  attributes: {
+    iconBox: Schema.Attribute.Component<'elements.icon-box', true>;
+    partnerSubtitle: Schema.Attribute.Text;
+    partnerTitle: Schema.Attribute.String;
+  };
+}
+
 export interface SubsidiariesGlobalMarketAbout extends Struct.ComponentSchema {
   collectionName: 'components_subsidiaries_global_market_abouts';
   info: {
@@ -389,6 +417,7 @@ declare module '@strapi/strapi' {
       'career.career-stats': CareerCareerStats;
       'elements.elements': ElementsElements;
       'elements.feature-item': ElementsFeatureItem;
+      'elements.icon-box': ElementsIconBox;
       'elements.key-value': ElementsKeyValue;
       'elements.single-text-repeater': ElementsSingleTextRepeater;
       'elements.stat-card': ElementsStatCard;
@@ -402,6 +431,7 @@ declare module '@strapi/strapi' {
       'home-page.home-career-section': HomePageHomeCareerSection;
       'home-page.home-hero-section': HomePageHomeHeroSection;
       'home-page.home-news-and-updates': HomePageHomeNewsAndUpdates;
+      'home-page.home-partner-section': HomePageHomePartnerSection;
       'subsidiaries.global-market-about': SubsidiariesGlobalMarketAbout;
       'subsidiaries.global-market-hero': SubsidiariesGlobalMarketHero;
       'subsidiaries.global-market-service': SubsidiariesGlobalMarketService;

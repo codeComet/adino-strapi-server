@@ -1,17 +1,24 @@
 {
   "collectionName": "components_about_about_teams",
   "info": {
-    "displayName": "About Team"
+    "displayName": "About Team",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
+    "teamTitle": {
       "type": "string"
     },
-    "heading": {
+    "teamDescription": {
+      "type": "text"
+    },
+    "directorTitle": {
       "type": "string"
     },
-    "team": {
+    "directorDescription": {
+      "type": "text"
+    },
+    "teamMember": {
       "type": "component",
       "repeatable": true,
       "component": "about.team-card"
