@@ -46,6 +46,11 @@
       "type": "component",
       "repeatable": true,
       "component": "elements.key-value"
+    },
+    "cta_btn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.elements"
     }
   }
 }

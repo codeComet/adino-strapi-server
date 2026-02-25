@@ -336,6 +336,7 @@ export interface SubsidiariesGlobalMarketAbout extends Struct.ComponentSchema {
   };
   attributes: {
     carousel: Schema.Attribute.Media<'images', true>;
+    cta_btn: Schema.Attribute.Component<'elements.elements', false>;
     description_1: Schema.Attribute.Blocks;
     description_2: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Text;
