@@ -25,6 +25,14 @@
     },
     "url_text": {
       "type": "string"
+    },
+    "description_editor": {
+      "type": "blocks"
+    },
+    "featureCompetitor": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.title-desc-repeater"
     }
   }
 }

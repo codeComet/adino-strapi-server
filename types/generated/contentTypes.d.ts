@@ -373,6 +373,52 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutAssetManagementAboutAssetManagement
+  extends Struct.SingleTypeSchema {
+  collectionName: 'about_asset_managements';
+  info: {
+    description: '';
+    displayName: 'About asset management';
+    pluralName: 'about-asset-managements';
+    singularName: 'about-asset-management';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    featureCompetitor: Schema.Attribute.Component<
+      'elements.title-desc-repeater',
+      true
+    >;
+    hero: Schema.Attribute.Component<'home-page.home-hero-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-asset-management.about-asset-management'
+    > &
+      Schema.Attribute.Private;
+    missionAndVision: Schema.Attribute.Component<'about.about-insight', false>;
+    ourModel: Schema.Attribute.Component<'elements.key-value', false>;
+    ourStrength: Schema.Attribute.Component<'elements.key-value', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    teamHeading: Schema.Attribute.String;
+    teamMembers: Schema.Attribute.Component<'about.team-card', true>;
+    teamTitle: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    valueItems: Schema.Attribute.Component<'elements.key-value', true>;
+    valuesDescription: Schema.Attribute.String;
+    valuesHeading: Schema.Attribute.String;
+    valuesTitle: Schema.Attribute.String;
+    whyDescription: Schema.Attribute.Text;
+    whyTitle: Schema.Attribute.String;
+  };
+}
+
 export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
   collectionName: 'about_pages';
   info: {
@@ -1426,6 +1472,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-asset-management.about-asset-management': ApiAboutAssetManagementAboutAssetManagement;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::adino-asset-management.adino-asset-management': ApiAdinoAssetManagementAdinoAssetManagement;
       'api::adino-capital.adino-capital': ApiAdinoCapitalAdinoCapital;

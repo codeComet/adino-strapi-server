@@ -16,11 +16,13 @@ export interface AboutAboutHero extends Struct.ComponentSchema {
 export interface AboutAboutInsight extends Struct.ComponentSchema {
   collectionName: 'components_about_about_insights';
   info: {
+    description: '';
     displayName: 'About Insight';
   };
   attributes: {
     heading: Schema.Attribute.String;
     insight_desc: Schema.Attribute.Blocks;
+    missionImage: Schema.Attribute.Media<'images'>;
     stats: Schema.Attribute.Component<'elements.stat-card', true>;
     title: Schema.Attribute.String;
   };
@@ -151,6 +153,11 @@ export interface ElementsKeyValue extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    description_editor: Schema.Attribute.Blocks;
+    featureCompetitor: Schema.Attribute.Component<
+      'elements.title-desc-repeater',
+      true
+    >;
     image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
     url: Schema.Attribute.Text;
@@ -191,6 +198,17 @@ export interface ElementsTestimonialCard extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'>;
     location_designation: Schema.Attribute.Text;
     name: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsTitleDescRepeater extends Struct.ComponentSchema {
+  collectionName: 'components_elements_title_desc_repeaters';
+  info: {
+    displayName: 'title desc repeater';
+  };
+  attributes: {
+    title1: Schema.Attribute.String;
+    title2: Schema.Attribute.String;
   };
 }
 
@@ -426,6 +444,7 @@ declare module '@strapi/strapi' {
       'elements.single-text-repeater': ElementsSingleTextRepeater;
       'elements.stat-card': ElementsStatCard;
       'elements.testimonial-card': ElementsTestimonialCard;
+      'elements.title-desc-repeater': ElementsTitleDescRepeater;
       'footer.footer': FooterFooter;
       'header.icons': HeaderIcons;
       'header.logo': HeaderLogo;

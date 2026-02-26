@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_title_desc_repeaters",
+  "info": {
+    "displayName": "title desc repeater"
+  },
+  "options": {},
+  "attributes": {
+    "title1": {
+      "type": "string"
+    },
+    "title2": {
+      "type": "string"
+    }
+  }
+}

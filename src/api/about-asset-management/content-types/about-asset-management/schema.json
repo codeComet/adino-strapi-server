@@ -1,0 +1,71 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_asset_managements",
+  "info": {
+    "singularName": "about-asset-management",
+    "pluralName": "about-asset-managements",
+    "displayName": "About asset management",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.home-hero-section"
+    },
+    "ourStrength": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.key-value"
+    },
+    "ourModel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.key-value"
+    },
+    "missionAndVision": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.about-insight"
+    },
+    "whyTitle": {
+      "type": "string"
+    },
+    "whyDescription": {
+      "type": "text"
+    },
+    "featureCompetitor": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.title-desc-repeater"
+    },
+    "valuesTitle": {
+      "type": "string"
+    },
+    "valuesHeading": {
+      "type": "string"
+    },
+    "valuesDescription": {
+      "type": "string"
+    },
+    "valueItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.key-value"
+    },
+    "teamTitle": {
+      "type": "string"
+    },
+    "teamHeading": {
+      "type": "string"
+    },
+    "teamMembers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about.team-card"
+    }
+  }
+}

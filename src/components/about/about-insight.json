@@ -1,7 +1,8 @@
 {
   "collectionName": "components_about_about_insights",
   "info": {
-    "displayName": "About Insight"
+    "displayName": "About Insight",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,6 +19,13 @@
     },
     "insight_desc": {
       "type": "blocks"
+    },
+    "missionImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
