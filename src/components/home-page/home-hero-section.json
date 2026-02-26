@@ -31,6 +31,11 @@
       "type": "component",
       "repeatable": true,
       "component": "elements.feature-item"
+    },
+    "hero_cta_2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.elements"
     }
   }
 }

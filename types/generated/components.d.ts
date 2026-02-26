@@ -298,6 +298,7 @@ export interface HomePageHomeHeroSection extends Struct.ComponentSchema {
     hero_bg: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     hero_bottom_text: Schema.Attribute.Blocks;
     hero_cta: Schema.Attribute.Component<'elements.elements', false>;
+    hero_cta_2: Schema.Attribute.Component<'elements.elements', false>;
     hero_features: Schema.Attribute.Component<'elements.feature-item', true>;
   };
 }
