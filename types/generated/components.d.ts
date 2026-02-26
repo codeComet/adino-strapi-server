@@ -373,6 +373,7 @@ export interface SubsidiariesGlobalMarketService
   };
   attributes: {
     cta: Schema.Attribute.Component<'elements.elements', false>;
+    description: Schema.Attribute.Text;
     heading: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
     services: Schema.Attribute.Component<'elements.key-value', true>;
