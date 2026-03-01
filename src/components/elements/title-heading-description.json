@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_title_heading_descriptions",
+  "info": {
+    "displayName": "Title Heading Description"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

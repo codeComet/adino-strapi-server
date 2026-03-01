@@ -212,6 +212,20 @@ export interface ElementsTitleDescRepeater extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsTitleHeadingDescription
+  extends Struct.ComponentSchema {
+  collectionName: 'components_elements_title_heading_descriptions';
+  info: {
+    displayName: 'Title Heading Description';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface FooterFooter extends Struct.ComponentSchema {
   collectionName: 'components_footer_footers';
   info: {
@@ -355,7 +369,7 @@ export interface SubsidiariesGlobalMarketAbout extends Struct.ComponentSchema {
   };
   attributes: {
     carousel: Schema.Attribute.Media<'images', true>;
-    cta_btn: Schema.Attribute.Component<'elements.elements', false>;
+    cta_btn: Schema.Attribute.Component<'elements.elements', true>;
     description_1: Schema.Attribute.Blocks;
     description_2: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Text;
@@ -373,7 +387,7 @@ export interface SubsidiariesGlobalMarketHero extends Struct.ComponentSchema {
     displayName: 'global market hero';
   };
   attributes: {
-    cta: Schema.Attribute.Component<'elements.elements', false>;
+    cta: Schema.Attribute.Component<'elements.elements', true>;
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
     hero_bg: Schema.Attribute.Media<'images' | 'videos'>;
@@ -445,6 +459,7 @@ declare module '@strapi/strapi' {
       'elements.stat-card': ElementsStatCard;
       'elements.testimonial-card': ElementsTestimonialCard;
       'elements.title-desc-repeater': ElementsTitleDescRepeater;
+      'elements.title-heading-description': ElementsTitleHeadingDescription;
       'footer.footer': FooterFooter;
       'header.icons': HeaderIcons;
       'header.logo': HeaderLogo;

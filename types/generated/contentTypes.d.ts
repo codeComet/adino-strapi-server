@@ -373,6 +373,51 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutAdinoCapitalAboutAdinoCapital
+  extends Struct.SingleTypeSchema {
+  collectionName: 'about_adino_capitals';
+  info: {
+    displayName: 'About Adino Capital';
+    pluralName: 'about-adino-capitals';
+    singularName: 'about-adino-capital';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about: Schema.Attribute.Component<
+      'subsidiaries.global-market-about',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'subsidiaries.global-market-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-adino-capital.about-adino-capital'
+    > &
+      Schema.Attribute.Private;
+    missionAndVision: Schema.Attribute.Component<
+      'elements.title-heading-description',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    teamDescription: Schema.Attribute.Text;
+    teamHeading: Schema.Attribute.String;
+    teamMembers: Schema.Attribute.Component<'elements.testimonial-card', true>;
+    teamTitle: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    valueItems: Schema.Attribute.Component<'elements.icon-box', true>;
+    valuesDescription: Schema.Attribute.Text;
+    valuesHeading: Schema.Attribute.String;
+    valuesTitle: Schema.Attribute.String;
+  };
+}
+
 export interface ApiAboutAssetManagementAboutAssetManagement
   extends Struct.SingleTypeSchema {
   collectionName: 'about_asset_managements';
@@ -1472,6 +1517,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-adino-capital.about-adino-capital': ApiAboutAdinoCapitalAboutAdinoCapital;
       'api::about-asset-management.about-asset-management': ApiAboutAssetManagementAboutAssetManagement;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::adino-asset-management.adino-asset-management': ApiAdinoAssetManagementAdinoAssetManagement;

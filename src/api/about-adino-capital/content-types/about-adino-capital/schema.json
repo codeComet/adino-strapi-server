@@ -1,0 +1,57 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_adino_capitals",
+  "info": {
+    "singularName": "about-adino-capital",
+    "pluralName": "about-adino-capitals",
+    "displayName": "About Adino Capital"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "subsidiaries.global-market-hero"
+    },
+    "about": {
+      "type": "component",
+      "repeatable": false,
+      "component": "subsidiaries.global-market-about"
+    },
+    "missionAndVision": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.title-heading-description"
+    },
+    "valuesTitle": {
+      "type": "string"
+    },
+    "valuesHeading": {
+      "type": "string"
+    },
+    "valuesDescription": {
+      "type": "text"
+    },
+    "valueItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "teamTitle": {
+      "type": "string"
+    },
+    "teamHeading": {
+      "type": "string"
+    },
+    "teamDescription": {
+      "type": "text"
+    },
+    "teamMembers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.testimonial-card"
+    }
+  }
+}
