@@ -534,6 +534,59 @@ export interface ApiAdinoAssetManagementAdinoAssetManagement
   };
 }
 
+export interface ApiAdinoCapitalServiceAdinoCapitalService
+  extends Struct.SingleTypeSchema {
+  collectionName: 'adino_capital_services';
+  info: {
+    description: '';
+    displayName: 'Adino Capital Service';
+    pluralName: 'adino-capital-services';
+    singularName: 'adino-capital-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about: Schema.Attribute.Component<
+      'subsidiaries.global-market-about',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'subsidiaries.global-market-hero', false>;
+    industryDescription: Schema.Attribute.Text;
+    industryHeading: Schema.Attribute.String;
+    industryImg: Schema.Attribute.Media<'images'>;
+    industryItems: Schema.Attribute.Component<
+      'elements.single-text-repeater',
+      true
+    >;
+    industryTitle: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::adino-capital-service.adino-capital-service'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    servicesItems: Schema.Attribute.Component<'elements.icon-box', true>;
+    sustainibilityDesc: Schema.Attribute.Blocks;
+    sustainibilityHeading: Schema.Attribute.String;
+    sustainibilityImage: Schema.Attribute.Media<'images'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whyAdinoSection: Schema.Attribute.Component<
+      'subsidiaries.global-market-about',
+      false
+    >;
+    whyHeading: Schema.Attribute.String;
+    whyItems: Schema.Attribute.Component<'elements.icon-box', true>;
+    whyTitle: Schema.Attribute.String;
+  };
+}
+
 export interface ApiAdinoCapitalAdinoCapital extends Struct.SingleTypeSchema {
   collectionName: 'adino_capitals';
   info: {
@@ -1521,6 +1574,7 @@ declare module '@strapi/strapi' {
       'api::about-asset-management.about-asset-management': ApiAboutAssetManagementAboutAssetManagement;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::adino-asset-management.adino-asset-management': ApiAdinoAssetManagementAdinoAssetManagement;
+      'api::adino-capital-service.adino-capital-service': ApiAdinoCapitalServiceAdinoCapitalService;
       'api::adino-capital.adino-capital': ApiAdinoCapitalAdinoCapital;
       'api::adino-global-market.adino-global-market': ApiAdinoGlobalMarketAdinoGlobalMarket;
       'api::adino-partner.adino-partner': ApiAdinoPartnerAdinoPartner;

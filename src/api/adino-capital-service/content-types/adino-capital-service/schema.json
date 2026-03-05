@@ -1,0 +1,81 @@
+{
+  "kind": "singleType",
+  "collectionName": "adino_capital_services",
+  "info": {
+    "singularName": "adino-capital-service",
+    "pluralName": "adino-capital-services",
+    "displayName": "Adino Capital Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "subsidiaries.global-market-hero"
+    },
+    "about": {
+      "type": "component",
+      "repeatable": false,
+      "component": "subsidiaries.global-market-about"
+    },
+    "servicesItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "industryTitle": {
+      "type": "string"
+    },
+    "industryHeading": {
+      "type": "string"
+    },
+    "industryDescription": {
+      "type": "text"
+    },
+    "industryItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.single-text-repeater"
+    },
+    "industryImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "whyAdinoSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "subsidiaries.global-market-about"
+    },
+    "whyTitle": {
+      "type": "string"
+    },
+    "whyHeading": {
+      "type": "string"
+    },
+    "whyItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "sustainibilityHeading": {
+      "type": "string"
+    },
+    "sustainibilityDesc": {
+      "type": "blocks"
+    },
+    "sustainibilityImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
