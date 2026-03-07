@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "asset_management_services",
+  "info": {
+    "singularName": "asset-management-service",
+    "pluralName": "asset-management-services",
+    "displayName": "Asset Management Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.home-hero-section"
+    },
+    "serviceTitle": {
+      "type": "string"
+    },
+    "serviceDescription": {
+      "type": "text"
+    },
+    "serviceItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "portfolioTitle": {
+      "type": "string"
+    },
+    "portFolioDescription": {
+      "type": "text"
+    },
+    "portfolioImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "portFolioSecondHeading": {
+      "type": "string"
+    },
+    "portFolioItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.key-value"
+    },
+    "ndPortfolioHeading": {
+      "type": "string"
+    },
+    "ndPortfolioDescription": {
+      "type": "text"
+    },
+    "ndPortfolioItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "ndPortfolioDescription2": {
+      "type": "text"
+    },
+    "investmentApproach": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.icon-box"
+    }
+  }
+}

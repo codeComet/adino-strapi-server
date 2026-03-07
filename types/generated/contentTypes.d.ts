@@ -693,6 +693,48 @@ export interface ApiAdinoPartnerAdinoPartner extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAssetManagementServiceAssetManagementService
+  extends Struct.SingleTypeSchema {
+  collectionName: 'asset_management_services';
+  info: {
+    displayName: 'Asset Management Service';
+    pluralName: 'asset-management-services';
+    singularName: 'asset-management-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'home-page.home-hero-section', false>;
+    investmentApproach: Schema.Attribute.Component<'elements.icon-box', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::asset-management-service.asset-management-service'
+    > &
+      Schema.Attribute.Private;
+    ndPortfolioDescription: Schema.Attribute.Text;
+    ndPortfolioDescription2: Schema.Attribute.Text;
+    ndPortfolioHeading: Schema.Attribute.String;
+    ndPortfolioItems: Schema.Attribute.Component<'elements.icon-box', true>;
+    portFolioDescription: Schema.Attribute.Text;
+    portfolioImage: Schema.Attribute.Media<'images'>;
+    portFolioItems: Schema.Attribute.Component<'elements.key-value', true>;
+    portFolioSecondHeading: Schema.Attribute.String;
+    portfolioTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    serviceDescription: Schema.Attribute.Text;
+    serviceItems: Schema.Attribute.Component<'elements.icon-box', true>;
+    serviceTitle: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   collectionName: 'blogs';
   info: {
@@ -1578,6 +1620,7 @@ declare module '@strapi/strapi' {
       'api::adino-capital.adino-capital': ApiAdinoCapitalAdinoCapital;
       'api::adino-global-market.adino-global-market': ApiAdinoGlobalMarketAdinoGlobalMarket;
       'api::adino-partner.adino-partner': ApiAdinoPartnerAdinoPartner;
+      'api::asset-management-service.asset-management-service': ApiAssetManagementServiceAssetManagementService;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
       'api::contact.contact': ApiContactContact;
