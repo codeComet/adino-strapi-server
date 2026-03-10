@@ -1,0 +1,71 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_adino_partners",
+  "info": {
+    "singularName": "about-adino-partner",
+    "pluralName": "about-adino-partners",
+    "displayName": "About Adino Partners",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.home-hero-section"
+    },
+    "about": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.home-about-section"
+    },
+    "missionAndVision": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "coreValueHeading": {
+      "type": "string"
+    },
+    "coreValueDescription": {
+      "type": "text"
+    },
+    "coreValueItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "whyAdinoSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.icon-box"
+    },
+    "teamHeading": {
+      "type": "string"
+    },
+    "teamSubheading": {
+      "type": "string"
+    },
+    "teamDescription": {
+      "type": "text"
+    },
+    "teamMembers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.testimonial-card"
+    },
+    "whyHeading2": {
+      "type": "string"
+    },
+    "whyDescription2": {
+      "type": "text"
+    },
+    "whySectionItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    }
+  }
+}

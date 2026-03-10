@@ -418,6 +418,49 @@ export interface ApiAboutAdinoCapitalAboutAdinoCapital
   };
 }
 
+export interface ApiAboutAdinoPartnerAboutAdinoPartner
+  extends Struct.SingleTypeSchema {
+  collectionName: 'about_adino_partners';
+  info: {
+    description: '';
+    displayName: 'About Adino Partners';
+    pluralName: 'about-adino-partners';
+    singularName: 'about-adino-partner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about: Schema.Attribute.Component<'home-page.home-about-section', false>;
+    coreValueDescription: Schema.Attribute.Text;
+    coreValueHeading: Schema.Attribute.String;
+    coreValueItems: Schema.Attribute.Component<'elements.icon-box', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'home-page.home-hero-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-adino-partner.about-adino-partner'
+    > &
+      Schema.Attribute.Private;
+    missionAndVision: Schema.Attribute.Component<'elements.icon-box', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    teamDescription: Schema.Attribute.Text;
+    teamHeading: Schema.Attribute.String;
+    teamMembers: Schema.Attribute.Component<'elements.testimonial-card', true>;
+    teamSubheading: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whyAdinoSection: Schema.Attribute.Component<'elements.icon-box', false>;
+    whyDescription2: Schema.Attribute.Text;
+    whyHeading2: Schema.Attribute.String;
+    whySectionItems: Schema.Attribute.Component<'elements.icon-box', true>;
+  };
+}
+
 export interface ApiAboutAssetManagementAboutAssetManagement
   extends Struct.SingleTypeSchema {
   collectionName: 'about_asset_managements';
@@ -1613,6 +1656,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-adino-capital.about-adino-capital': ApiAboutAdinoCapitalAboutAdinoCapital;
+      'api::about-adino-partner.about-adino-partner': ApiAboutAdinoPartnerAboutAdinoPartner;
       'api::about-asset-management.about-asset-management': ApiAboutAssetManagementAboutAssetManagement;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::adino-asset-management.adino-asset-management': ApiAdinoAssetManagementAdinoAssetManagement;
