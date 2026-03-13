@@ -1,0 +1,53 @@
+{
+  "kind": "singleType",
+  "collectionName": "adino_partners_services",
+  "info": {
+    "singularName": "adino-partners-service",
+    "pluralName": "adino-partners-services",
+    "displayName": "Adino Partners Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.home-hero-section"
+    },
+    "focusAreaHeading": {
+      "type": "string"
+    },
+    "focusAreaDescription": {
+      "type": "text"
+    },
+    "focusAreaImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "focusAreaItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.single-text-repeater"
+    },
+    "keyIndustry": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.icon-box"
+    },
+    "coreStrategyHeading": {
+      "type": "string"
+    },
+    "coreStrategyDescription": {
+      "type": "text"
+    },
+    "coreStrategyItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    }
+  }
+}

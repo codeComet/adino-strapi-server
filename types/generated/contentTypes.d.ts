@@ -736,6 +736,46 @@ export interface ApiAdinoPartnerAdinoPartner extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAdinoPartnersServiceAdinoPartnersService
+  extends Struct.SingleTypeSchema {
+  collectionName: 'adino_partners_services';
+  info: {
+    displayName: 'Adino Partners Service';
+    pluralName: 'adino-partners-services';
+    singularName: 'adino-partners-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    coreStrategyDescription: Schema.Attribute.Text;
+    coreStrategyHeading: Schema.Attribute.String;
+    coreStrategyItems: Schema.Attribute.Component<'elements.icon-box', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    focusAreaDescription: Schema.Attribute.Text;
+    focusAreaHeading: Schema.Attribute.String;
+    focusAreaImage: Schema.Attribute.Media<'images'>;
+    focusAreaItems: Schema.Attribute.Component<
+      'elements.single-text-repeater',
+      true
+    >;
+    hero: Schema.Attribute.Component<'home-page.home-hero-section', false>;
+    keyIndustry: Schema.Attribute.Component<'elements.icon-box', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::adino-partners-service.adino-partners-service'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAssetManagementServiceAssetManagementService
   extends Struct.SingleTypeSchema {
   collectionName: 'asset_management_services';
@@ -1664,6 +1704,7 @@ declare module '@strapi/strapi' {
       'api::adino-capital.adino-capital': ApiAdinoCapitalAdinoCapital;
       'api::adino-global-market.adino-global-market': ApiAdinoGlobalMarketAdinoGlobalMarket;
       'api::adino-partner.adino-partner': ApiAdinoPartnerAdinoPartner;
+      'api::adino-partners-service.adino-partners-service': ApiAdinoPartnersServiceAdinoPartnersService;
       'api::asset-management-service.asset-management-service': ApiAssetManagementServiceAssetManagementService;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
