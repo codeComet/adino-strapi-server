@@ -1,0 +1,84 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_adino_global_markets",
+  "info": {
+    "singularName": "about-adino-global-market",
+    "pluralName": "about-adino-global-markets",
+    "displayName": "About Adino Global Market",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "subsidiaries.global-market-hero"
+    },
+    "about": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.home-about-section"
+    },
+    "missionAndVision": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "globalExcellence": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.icon-box"
+    },
+    "coreValuesTitle": {
+      "type": "string"
+    },
+    "coreValueHeading": {
+      "type": "string"
+    },
+    "coreValueDescription": {
+      "type": "text"
+    },
+    "coreValueItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "approachTitle": {
+      "type": "string"
+    },
+    "approachHeading": {
+      "type": "string"
+    },
+    "approachDescription": {
+      "type": "text"
+    },
+    "approachImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "approachItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "teamTitle": {
+      "type": "string"
+    },
+    "teamHeading": {
+      "type": "string"
+    },
+    "teamDescription": {
+      "type": "blocks"
+    },
+    "teamMembers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.testimonial-card"
+    }
+  }
+}
