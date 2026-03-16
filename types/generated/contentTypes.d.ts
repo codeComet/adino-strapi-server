@@ -1005,6 +1005,41 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiGlobalMarketExecutiveManagementGlobalMarketExecutiveManagement
+  extends Struct.SingleTypeSchema {
+  collectionName: 'global_market_executive_managements';
+  info: {
+    displayName: 'Global Market Executive Management';
+    pluralName: 'global-market-executive-managements';
+    singularName: 'global-market-executive-management';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::global-market-executive-management.global-market-executive-management'
+    > &
+      Schema.Attribute.Private;
+    managementTeam: Schema.Attribute.Component<
+      'elements.testimonial-card',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
@@ -1757,6 +1792,7 @@ declare module '@strapi/strapi' {
       'api::career.career': ApiCareerCareer;
       'api::contact.contact': ApiContactContact;
       'api::footer.footer': ApiFooterFooter;
+      'api::global-market-executive-management.global-market-executive-management': ApiGlobalMarketExecutiveManagementGlobalMarketExecutiveManagement;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::insight.insight': ApiInsightInsight;
       'api::job.job': ApiJobJob;
