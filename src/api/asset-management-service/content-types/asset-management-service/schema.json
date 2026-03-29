@@ -4,7 +4,8 @@
   "info": {
     "singularName": "asset-management-service",
     "pluralName": "asset-management-services",
-    "displayName": "Asset Management Service"
+    "displayName": "Asset Management Service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -33,11 +34,12 @@
       "type": "text"
     },
     "portfolioImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "portFolioSecondHeading": {
       "type": "string"
@@ -65,6 +67,13 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.icon-box"
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

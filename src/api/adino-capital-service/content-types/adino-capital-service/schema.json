@@ -71,6 +71,14 @@
       "type": "blocks"
     },
     "sustainibilityImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "pageLogo": {
       "allowedTypes": [
         "images"
       ],

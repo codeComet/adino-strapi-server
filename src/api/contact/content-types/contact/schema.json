@@ -35,6 +35,13 @@
       "type": "component",
       "repeatable": true,
       "component": "elements.key-value"
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

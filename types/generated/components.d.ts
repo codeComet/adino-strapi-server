@@ -229,6 +229,7 @@ export interface ElementsTitleHeadingDescription
 export interface FooterFooter extends Struct.ComponentSchema {
   collectionName: 'components_footer_footers';
   info: {
+    description: '';
     displayName: 'Footer';
   };
   attributes: {
@@ -240,6 +241,7 @@ export interface FooterFooter extends Struct.ComponentSchema {
     governance_text: Schema.Attribute.String;
     more_info_pages: Schema.Attribute.Component<'header.pages', true>;
     more_info_text: Schema.Attribute.String;
+    showIcons: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     social: Schema.Attribute.String;
     social_links: Schema.Attribute.Component<'header.icons', true>;
   };

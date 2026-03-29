@@ -20,6 +20,13 @@
         "subsidiaries.subsidiary-testimonial",
         "subsidiaries.subsidiary-newsletter"
       ]
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

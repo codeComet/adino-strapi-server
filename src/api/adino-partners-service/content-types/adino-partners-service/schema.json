@@ -4,7 +4,8 @@
   "info": {
     "singularName": "adino-partners-service",
     "pluralName": "adino-partners-services",
-    "displayName": "Adino Partners Service"
+    "displayName": "Adino Partners Service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,11 +23,12 @@
       "type": "text"
     },
     "focusAreaImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "focusAreaItems": {
       "type": "component",
@@ -48,6 +50,13 @@
       "type": "component",
       "repeatable": true,
       "component": "elements.icon-box"
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

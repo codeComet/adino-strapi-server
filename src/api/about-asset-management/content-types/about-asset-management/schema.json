@@ -66,6 +66,13 @@
       "type": "component",
       "repeatable": true,
       "component": "about.team-card"
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

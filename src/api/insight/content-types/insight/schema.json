@@ -26,9 +26,17 @@
       "type": "text"
     },
     "footer_bg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
+      ]
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
       ],
       "type": "media",
       "multiple": false

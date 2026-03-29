@@ -19,6 +19,13 @@
         "career.career-benefits",
         "elements.key-value"
       ]
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

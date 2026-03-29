@@ -4,7 +4,8 @@
   "info": {
     "singularName": "about-adino-capital",
     "pluralName": "about-adino-capitals",
-    "displayName": "About Adino Capital"
+    "displayName": "About Adino Capital",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -52,6 +53,16 @@
       "type": "component",
       "repeatable": true,
       "component": "elements.testimonial-card"
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

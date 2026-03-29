@@ -377,6 +377,7 @@ export interface ApiAboutAdinoCapitalAboutAdinoCapital
   extends Struct.SingleTypeSchema {
   collectionName: 'about_adino_capitals';
   info: {
+    description: '';
     displayName: 'About Adino Capital';
     pluralName: 'about-adino-capitals';
     singularName: 'about-adino-capital';
@@ -403,6 +404,7 @@ export interface ApiAboutAdinoCapitalAboutAdinoCapital
       'elements.title-heading-description',
       true
     >;
+    pageLogo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
     teamDescription: Schema.Attribute.Text;
     teamHeading: Schema.Attribute.String;
@@ -437,6 +439,7 @@ export interface ApiAboutAdinoGlobalMarketAboutAdinoGlobalMarket
     approachImage: Schema.Attribute.Media<'images', true>;
     approachItems: Schema.Attribute.Component<'elements.icon-box', true>;
     approachTitle: Schema.Attribute.String;
+    coreValueBgImg: Schema.Attribute.Media<'images'>;
     coreValueDescription: Schema.Attribute.Text;
     coreValueHeading: Schema.Attribute.String;
     coreValueItems: Schema.Attribute.Component<'elements.icon-box', true>;
@@ -453,6 +456,7 @@ export interface ApiAboutAdinoGlobalMarketAboutAdinoGlobalMarket
     > &
       Schema.Attribute.Private;
     missionAndVision: Schema.Attribute.Component<'elements.icon-box', true>;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     teamDescription: Schema.Attribute.Blocks;
     teamHeading: Schema.Attribute.String;
@@ -492,6 +496,7 @@ export interface ApiAboutAdinoPartnerAboutAdinoPartner
     > &
       Schema.Attribute.Private;
     missionAndVision: Schema.Attribute.Component<'elements.icon-box', true>;
+    pageLogo: Schema.Attribute.Media<'files' | 'images'>;
     publishedAt: Schema.Attribute.DateTime;
     teamDescription: Schema.Attribute.Text;
     teamHeading: Schema.Attribute.String;
@@ -537,6 +542,7 @@ export interface ApiAboutAssetManagementAboutAssetManagement
     missionAndVision: Schema.Attribute.Component<'about.about-insight', false>;
     ourModel: Schema.Attribute.Component<'elements.key-value', false>;
     ourStrength: Schema.Attribute.Component<'elements.key-value', false>;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     teamHeading: Schema.Attribute.String;
     teamMembers: Schema.Attribute.Component<'about.team-card', true>;
@@ -580,6 +586,7 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     mission: Schema.Attribute.Component<'elements.key-value', true>;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -592,6 +599,7 @@ export interface ApiAdinoAssetManagementAdinoAssetManagement
   extends Struct.SingleTypeSchema {
   collectionName: 'adino_asset_managements';
   info: {
+    description: '';
     displayName: 'Adino Asset Management';
     pluralName: 'adino-asset-managements';
     singularName: 'adino-asset-management';
@@ -609,6 +617,7 @@ export interface ApiAdinoAssetManagementAdinoAssetManagement
       'api::adino-asset-management.adino-asset-management'
     > &
       Schema.Attribute.Private;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
@@ -658,6 +667,7 @@ export interface ApiAdinoCapitalServiceAdinoCapitalService
       'api::adino-capital-service.adino-capital-service'
     > &
       Schema.Attribute.Private;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     servicesItems: Schema.Attribute.Component<'elements.icon-box', true>;
     sustainibilityDesc: Schema.Attribute.Blocks;
@@ -679,6 +689,7 @@ export interface ApiAdinoCapitalServiceAdinoCapitalService
 export interface ApiAdinoCapitalAdinoCapital extends Struct.SingleTypeSchema {
   collectionName: 'adino_capitals';
   info: {
+    description: '';
     displayName: 'Adino Capital';
     pluralName: 'adino-capitals';
     singularName: 'adino-capital';
@@ -696,6 +707,7 @@ export interface ApiAdinoCapitalAdinoCapital extends Struct.SingleTypeSchema {
       'api::adino-capital.adino-capital'
     > &
       Schema.Attribute.Private;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
@@ -732,6 +744,7 @@ export interface ApiAdinoGlobalMarketAdinoGlobalMarket
       'api::adino-global-market.adino-global-market'
     > &
       Schema.Attribute.Private;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
@@ -751,6 +764,7 @@ export interface ApiAdinoGlobalMarketAdinoGlobalMarket
 export interface ApiAdinoPartnerAdinoPartner extends Struct.SingleTypeSchema {
   collectionName: 'adino_partners';
   info: {
+    description: '';
     displayName: 'Adino Partners';
     pluralName: 'adino-partners';
     singularName: 'adino-partner';
@@ -768,6 +782,7 @@ export interface ApiAdinoPartnerAdinoPartner extends Struct.SingleTypeSchema {
       'api::adino-partner.adino-partner'
     > &
       Schema.Attribute.Private;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
@@ -786,6 +801,7 @@ export interface ApiAdinoPartnersServiceAdinoPartnersService
   extends Struct.SingleTypeSchema {
   collectionName: 'adino_partners_services';
   info: {
+    description: '';
     displayName: 'Adino Partners Service';
     pluralName: 'adino-partners-services';
     singularName: 'adino-partners-service';
@@ -815,6 +831,7 @@ export interface ApiAdinoPartnersServiceAdinoPartnersService
       'api::adino-partners-service.adino-partners-service'
     > &
       Schema.Attribute.Private;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -826,6 +843,7 @@ export interface ApiAssetManagementServiceAssetManagementService
   extends Struct.SingleTypeSchema {
   collectionName: 'asset_management_services';
   info: {
+    description: '';
     displayName: 'Asset Management Service';
     pluralName: 'asset-management-services';
     singularName: 'asset-management-service';
@@ -849,6 +867,7 @@ export interface ApiAssetManagementServiceAssetManagementService
     ndPortfolioDescription2: Schema.Attribute.Text;
     ndPortfolioHeading: Schema.Attribute.String;
     ndPortfolioItems: Schema.Attribute.Component<'elements.icon-box', true>;
+    pageLogo: Schema.Attribute.Media<'images'>;
     portFolioDescription: Schema.Attribute.Text;
     portfolioImage: Schema.Attribute.Media<'images'>;
     portFolioItems: Schema.Attribute.Component<'elements.key-value', true>;
@@ -935,6 +954,7 @@ export interface ApiCareerCareer extends Struct.SingleTypeSchema {
       'api::career.career'
     > &
       Schema.Attribute.Private;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -969,6 +989,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     map_heading: Schema.Attribute.Text;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -1009,6 +1030,7 @@ export interface ApiGlobalMarketExecutiveManagementGlobalMarketExecutiveManageme
   extends Struct.SingleTypeSchema {
   collectionName: 'global_market_executive_managements';
   info: {
+    description: '';
     displayName: 'Global Market Executive Management';
     pluralName: 'global-market-executive-managements';
     singularName: 'global-market-executive-management';
@@ -1032,6 +1054,7 @@ export interface ApiGlobalMarketExecutiveManagementGlobalMarketExecutiveManageme
       'elements.testimonial-card',
       true
     >;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -1061,6 +1084,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'api::home-page.home-page'
     > &
       Schema.Attribute.Private;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
@@ -1104,6 +1128,7 @@ export interface ApiInsightInsight extends Struct.SingleTypeSchema {
       'api::insight.insight'
     > &
       Schema.Attribute.Private;
+    pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -1261,6 +1286,41 @@ export interface ApiSubsidiaryTestimonialSubsidiaryTestimonial
       'subsidiaries.subsidiary-testimonial',
       false
     >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWelcomePageWelcomePage extends Struct.SingleTypeSchema {
+  collectionName: 'welcome_pages';
+  info: {
+    displayName: 'Welcome page';
+    pluralName: 'welcome-pages';
+    singularName: 'welcome-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    approachDescription: Schema.Attribute.Blocks;
+    approachItems: Schema.Attribute.Component<'elements.icon-box', true>;
+    approachTitle: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::welcome-page.welcome-page'
+    > &
+      Schema.Attribute.Private;
+    pageLogo: Schema.Attribute.Media<'images'>;
+    publishedAt: Schema.Attribute.DateTime;
+    testimonial: Schema.Attribute.Component<'elements.testimonial-card', false>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1799,6 +1859,7 @@ declare module '@strapi/strapi' {
       'api::newsletter.newsletter': ApiNewsletterNewsletter;
       'api::subsidiary-newsletter.subsidiary-newsletter': ApiSubsidiaryNewsletterSubsidiaryNewsletter;
       'api::subsidiary-testimonial.subsidiary-testimonial': ApiSubsidiaryTestimonialSubsidiaryTestimonial;
+      'api::welcome-page.welcome-page': ApiWelcomePageWelcomePage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

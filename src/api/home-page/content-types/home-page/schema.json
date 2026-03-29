@@ -25,6 +25,13 @@
         "home-page.home-career-section",
         "home-page.home-partner-section"
       ]
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "adino-asset-management",
     "pluralName": "adino-asset-managements",
-    "displayName": "Adino Asset Management"
+    "displayName": "Adino Asset Management",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,6 +18,13 @@
         "subsidiaries.global-market-about",
         "subsidiaries.global-market-service"
       ]
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

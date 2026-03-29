@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "welcome_pages",
+  "info": {
+    "singularName": "welcome-page",
+    "pluralName": "welcome-pages",
+    "displayName": "Welcome page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "testimonial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.testimonial-card"
+    },
+    "approachTitle": {
+      "type": "string"
+    },
+    "approachItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-box"
+    },
+    "approachDescription": {
+      "type": "blocks"
+    }
+  }
+}

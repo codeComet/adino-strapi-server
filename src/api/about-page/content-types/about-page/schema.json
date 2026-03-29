@@ -36,6 +36,13 @@
         "about.about-values",
         "about.about-team"
       ]
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

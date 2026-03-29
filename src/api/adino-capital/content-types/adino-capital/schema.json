@@ -4,7 +4,8 @@
   "info": {
     "singularName": "adino-capital",
     "pluralName": "adino-capitals",
-    "displayName": "Adino Capital"
+    "displayName": "Adino Capital",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,6 +18,13 @@
         "subsidiaries.global-market-about",
         "subsidiaries.global-market-service"
       ]
+    },
+    "pageLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
