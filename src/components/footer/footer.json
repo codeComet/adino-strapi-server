@@ -47,6 +47,14 @@
     "showIcons": {
       "type": "boolean",
       "default": true
+    },
+    "subsidiaryText": {
+      "type": "string"
+    },
+    "subsidiaryLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.pages"
     }
   }
 }

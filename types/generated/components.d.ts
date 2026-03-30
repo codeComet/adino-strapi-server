@@ -244,6 +244,8 @@ export interface FooterFooter extends Struct.ComponentSchema {
     showIcons: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     social: Schema.Attribute.String;
     social_links: Schema.Attribute.Component<'header.icons', true>;
+    subsidiaryLinks: Schema.Attribute.Component<'header.pages', true>;
+    subsidiaryText: Schema.Attribute.String;
   };
 }
 
