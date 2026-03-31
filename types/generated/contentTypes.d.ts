@@ -676,13 +676,9 @@ export interface ApiAdinoCapitalServiceAdinoCapitalService
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    whyAdinoSection: Schema.Attribute.Component<
-      'subsidiaries.global-market-about',
-      false
-    >;
-    whyHeading: Schema.Attribute.String;
-    whyItems: Schema.Attribute.Component<'elements.icon-box', true>;
-    whyTitle: Schema.Attribute.String;
+    whyAdinoSectionCta: Schema.Attribute.Component<'elements.elements', false>;
+    whyAdinoSectionDescription: Schema.Attribute.Blocks;
+    whyAdinoSectionHeading: Schema.Attribute.String;
   };
 }
 

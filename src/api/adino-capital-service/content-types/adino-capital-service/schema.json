@@ -48,22 +48,6 @@
         "images"
       ]
     },
-    "whyAdinoSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "subsidiaries.global-market-about"
-    },
-    "whyTitle": {
-      "type": "string"
-    },
-    "whyHeading": {
-      "type": "string"
-    },
-    "whyItems": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.icon-box"
-    },
     "sustainibilityHeading": {
       "type": "string"
     },
@@ -79,11 +63,23 @@
       ]
     },
     "pageLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "whyAdinoSectionHeading": {
+      "type": "string"
+    },
+    "whyAdinoSectionDescription": {
+      "type": "blocks"
+    },
+    "whyAdinoSectionCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.elements"
     }
   }
 }
