@@ -21,11 +21,6 @@
       "repeatable": false,
       "component": "home-page.home-about-section"
     },
-    "missionAndVision": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.icon-box"
-    },
     "coreValueHeading": {
       "type": "string"
     },
@@ -56,24 +51,33 @@
       "repeatable": true,
       "component": "elements.testimonial-card"
     },
-    "whyHeading2": {
-      "type": "string"
-    },
-    "whyDescription2": {
-      "type": "text"
-    },
-    "whySectionItems": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.icon-box"
-    },
     "pageLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "files",
         "images"
-      ],
+      ]
+    },
+    "missionAndVisionBgImg": {
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "missionAndVisionItem": {
+      "displayName": "Heading Description Cta",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.heading-description-cta"
+    },
+    "whyAdinoSectionCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.elements"
     }
   }
 }

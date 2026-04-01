@@ -133,6 +133,19 @@ export interface ElementsFeatureItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsHeadingDescriptionCta extends Struct.ComponentSchema {
+  collectionName: 'components_elements_heading_description_ctas';
+  info: {
+    description: '';
+    displayName: 'Heading Description Cta';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.elements', false>;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsIconBox extends Struct.ComponentSchema {
   collectionName: 'components_elements_icon_boxes';
   info: {
@@ -457,6 +470,7 @@ declare module '@strapi/strapi' {
       'career.career-stats': CareerCareerStats;
       'elements.elements': ElementsElements;
       'elements.feature-item': ElementsFeatureItem;
+      'elements.heading-description-cta': ElementsHeadingDescriptionCta;
       'elements.icon-box': ElementsIconBox;
       'elements.key-value': ElementsKeyValue;
       'elements.single-text-repeater': ElementsSingleTextRepeater;

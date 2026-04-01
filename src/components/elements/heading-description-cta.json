@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_heading_description_ctas",
+  "info": {
+    "displayName": "Heading Description Cta",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.elements"
+    }
+  }
+}

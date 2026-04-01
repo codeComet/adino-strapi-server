@@ -495,7 +495,11 @@ export interface ApiAboutAdinoPartnerAboutAdinoPartner
       'api::about-adino-partner.about-adino-partner'
     > &
       Schema.Attribute.Private;
-    missionAndVision: Schema.Attribute.Component<'elements.icon-box', true>;
+    missionAndVisionBgImg: Schema.Attribute.Media<'images'>;
+    missionAndVisionItem: Schema.Attribute.Component<
+      'elements.heading-description-cta',
+      true
+    >;
     pageLogo: Schema.Attribute.Media<'files' | 'images'>;
     publishedAt: Schema.Attribute.DateTime;
     teamDescription: Schema.Attribute.Text;
@@ -506,9 +510,7 @@ export interface ApiAboutAdinoPartnerAboutAdinoPartner
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     whyAdinoSection: Schema.Attribute.Component<'elements.icon-box', false>;
-    whyDescription2: Schema.Attribute.Text;
-    whyHeading2: Schema.Attribute.String;
-    whySectionItems: Schema.Attribute.Component<'elements.icon-box', true>;
+    whyAdinoSectionCta: Schema.Attribute.Component<'elements.elements', false>;
   };
 }
 
