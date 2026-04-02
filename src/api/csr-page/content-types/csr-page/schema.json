@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "csr_pages",
+  "info": {
+    "singularName": "csr-page",
+    "pluralName": "csr-pages",
+    "displayName": "CSR Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "subsidiaries.global-market-hero"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "box": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.title-heading-description"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.elements"
+    }
+  }
+}

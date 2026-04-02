@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "csr_explores",
+  "info": {
+    "singularName": "csr-explore",
+    "pluralName": "csr-explores",
+    "displayName": "CSR explore"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "gallery": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -996,6 +996,72 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCsrExploreCsrExplore extends Struct.SingleTypeSchema {
+  collectionName: 'csr_explores';
+  info: {
+    displayName: 'CSR explore';
+    pluralName: 'csr-explores';
+    singularName: 'csr-explore';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    gallery: Schema.Attribute.Media<'images' | 'files', true>;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::csr-explore.csr-explore'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCsrPageCsrPage extends Struct.SingleTypeSchema {
+  collectionName: 'csr_pages';
+  info: {
+    displayName: 'CSR Page';
+    pluralName: 'csr-pages';
+    singularName: 'csr-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    box: Schema.Attribute.Component<
+      'elements.title-heading-description',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'elements.elements', false>;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+    hero: Schema.Attribute.Component<'subsidiaries.global-market-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::csr-page.csr-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   collectionName: 'footers';
   info: {
@@ -1850,6 +1916,8 @@ declare module '@strapi/strapi' {
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
       'api::contact.contact': ApiContactContact;
+      'api::csr-explore.csr-explore': ApiCsrExploreCsrExplore;
+      'api::csr-page.csr-page': ApiCsrPageCsrPage;
       'api::footer.footer': ApiFooterFooter;
       'api::global-market-executive-management.global-market-executive-management': ApiGlobalMarketExecutiveManagementGlobalMarketExecutiveManagement;
       'api::home-page.home-page': ApiHomePageHomePage;
