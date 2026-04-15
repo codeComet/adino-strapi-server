@@ -62,17 +62,18 @@
     "teamHeading": {
       "type": "string"
     },
+    "pageLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "teamMembers": {
       "type": "component",
       "repeatable": true,
-      "component": "about.team-card"
-    },
-    "pageLogo": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
+      "component": "elements.testimonial-card"
     }
   }
 }

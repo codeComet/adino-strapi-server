@@ -547,7 +547,7 @@ export interface ApiAboutAssetManagementAboutAssetManagement
     pageLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     teamHeading: Schema.Attribute.String;
-    teamMembers: Schema.Attribute.Component<'about.team-card', true>;
+    teamMembers: Schema.Attribute.Component<'elements.testimonial-card', true>;
     teamTitle: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
