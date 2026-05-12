@@ -15,9 +15,6 @@ RUN npm run build
 # Ensure uploads dir exists
 RUN mkdir -p /opt/app/public/uploads
 
-# Copy media uploads from build context
-COPY uploads/ /opt/app/public/uploads/
-
 EXPOSE 1337
 
 CMD ["npm", "start"]
