@@ -12,9 +12,8 @@ COPY . .
 
 RUN npm run build
 
-# Ensure uploads dir exists and copy from external uploads context
+# Ensure uploads dir exists
 RUN mkdir -p /opt/app/public/uploads
-COPY --from=uploads . /opt/app/public/uploads/
 
 EXPOSE 1337
 
