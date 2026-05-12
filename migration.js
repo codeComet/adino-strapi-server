@@ -5,11 +5,11 @@ const { Client } = require("pg");
 const sqlite = new Database(".tmp/data.db");
 
 const pg = new Client({
-  host: "localhost",
-  port: 5432,
-  database: "strapi",
-  user: "postgres",
-  password: "admin",
+  host: process.env.DATABASE_HOST,
+  port: Number(process.env.DATABASE_PORT),
+  database: process.env.DATABASE_NAME,
+  user: process.env.DATABASE_USERNAME,
+  password: process.env.DATABASE_PASSWORD,
 });
 
 // Convert SQLite timestamp (ms integer) to a PG-safe ISO string
