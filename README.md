@@ -40,6 +40,17 @@ Strapi gives you many possible deployment options for your project including [St
 yarn strapi deploy
 ```
 
+## 🗄️ Media uploads (Docker)
+
+If you use the default local upload provider, Strapi stores media in `public/uploads`.
+In Docker, you should mount a persistent volume to `/opt/app/public/uploads` or uploads will be lost when the container is recreated.
+
+Example bind mount:
+
+```
+/var/lib/strapi/uploads:/opt/app/public/uploads
+```
+
 ## 📚 Learn more
 
 - [Resource center](https://strapi.io/resource-center) - Strapi resource center.
